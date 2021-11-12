@@ -12,6 +12,7 @@ class MainForm : public QWidget
   Q_OBJECT
   private:
     DiceWidget* dice[ DICE_COUNT ];
+    QLCDNumber* lcds[ DICE_COUNT ];
 
   public:
     explicit MainForm( QWidget* parent = nullptr );

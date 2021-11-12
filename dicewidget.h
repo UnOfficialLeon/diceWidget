@@ -23,6 +23,7 @@ class DiceWidget : public QWidget
 
   public:
     explicit DiceWidget( QWidget* parent = nullptr );
+    int getValue() const;
 
   public slots:
     void rollDiceSlot( void );
@@ -30,6 +31,9 @@ class DiceWidget : public QWidget
   protected:
     virtual void resizeEvent( QResizeEvent* event );
     virtual void paintEvent( QPaintEvent* event );
+
+  signals:
+    void valueChanged(int newValue);
 };
 
 #endif // DICEWIDGET_H

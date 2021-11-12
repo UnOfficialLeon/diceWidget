@@ -9,8 +9,13 @@ DiceWidget::DiceWidget( QWidget* parent )
 
 void DiceWidget::rollDiceSlot( void )
 {
-  value = rand() % 6 + 1;
-  update();
+
+  int newValue = rand() % 6 + 1;
+  if(newValue != value){
+    update();
+    value=newValue;
+    emit valueChanged(newValue);
+  }
 }
 
 void DiceWidget::resizeEvent( QResizeEvent* /*event*/ )
@@ -29,6 +34,11 @@ void DiceWidget::paintEvent( QPaintEvent* /*event*/ )
   painter.setRenderHint( QPainter::Antialiasing );
   drawDiceBackGround( &painter );
   drawDiceDots( &painter );
+}
+
+int DiceWidget::getValue() const
+{
+  return value;
 }
 
 void DiceWidget::drawDot( QPainter* painter, QPoint pos )
