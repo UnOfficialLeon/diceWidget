@@ -1,15 +1,15 @@
 #include <QApplication>
-#include "dicewidget.h"
+#include "mainform.h"
 #include <stdlib.h>
 #include <time.h>
 
-int main(int argc, char** argv)
+int main( int argc, char** argv )
 {
-  srand(unsigned(time(nullptr)));
+  srand( unsigned( time( nullptr ) ) );
   QApplication app( argc, argv );
-  // Würfelobjekt als Hauptfenster erzeugen
-  DiceWidget mainForm;
-  // und anzeigen
+  // Hauptfenster erstellen
+  MainForm mainForm;
+  // Hauptfenster anzeigen
   mainForm.show();
   return app.exec();
 }

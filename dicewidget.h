@@ -2,20 +2,34 @@
 #define DICEWIDGET_H
 
 #include <QtWidgets>
-#define MIN_DICE_SIZE 64
+#define  MIN_DICE_SIZE 64
 
 class DiceWidget : public QWidget
 {
-    Q_OBJECT
+  Q_OBJECT
   private:
-    int value;
-    void punkte(int stepX, int stepY, int radius);
+    int   value;
+    QRect diceRect;
+    int   dotRadius;
+    int   dotStep;
+
+    void drawDot( QPainter* painter, QPoint pos );
+    void drawCenterDot( QPainter* painter );
+    void drawTopLeftBottomRightDots( QPainter* painter );
+    void drawTopRightBottomLeftDots( QPainter* painter );
+    void drawOuterMiddleDots( QPainter* painter );
+    void drawDiceBackGround( QPainter* painter );
+    void drawDiceDots( QPainter* painter );
 
   public:
-    explicit DiceWidget(QWidget *parent = nullptr);
+    explicit DiceWidget( QWidget* parent = nullptr );
+
+  public slots:
+    void rollDiceSlot( void );
 
   protected:
-    virtual void paintEvent(QPaintEvent *event);
+    virtual void resizeEvent( QResizeEvent* event );
+    virtual void paintEvent( QPaintEvent* event );
 };
 
 #endif // DICEWIDGET_H

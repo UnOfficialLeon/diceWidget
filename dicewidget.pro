@@ -1,10 +1,10 @@
-TEMPLATE = app
-TARGET = dicewidget
+TEMPLATE     = app
+TARGET       = dicewidget
 INCLUDEPATH += .
-QT += widgets
+QT          += widgets
 
-DEFINES += QT_DEPRECATED_WARNINGS
-
-SOURCES += main.cpp dicewidget.cpp
-
-HEADERS +=          dicewidget.h
+# Input
+SOURCES     += main.cpp dicewidget.cpp \
+    mainform.cpp
+HEADERS     +=          dicewidget.h \
+    mainform.h
