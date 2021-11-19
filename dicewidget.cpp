@@ -16,6 +16,7 @@ void DiceWidget::rollDiceSlot( void )
     value=newValue;
     emit valueChanged(newValue);
   }
+  // Signal in MainForm nutzen
 }
 
 void DiceWidget::resizeEvent( QResizeEvent* /*event*/ )

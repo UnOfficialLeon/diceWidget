@@ -21,8 +21,8 @@ MainForm::MainForm( QWidget* parent )
     //newNumber->setDecMode(); UNNÖTIG
     diceLayout->addWidget( newNumber, 2, i);
     lcds[i] = newNumber;
-    connect( btnRollDice, SIGNAL( valueChanged ),
-               newNumber, SLOT( display() ));
+    connect( newDice, SIGNAL( valueChanged(int) ),
+               newNumber, SLOT( display(int) ));
 
   }
 
