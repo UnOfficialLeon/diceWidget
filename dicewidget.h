@@ -2,6 +2,7 @@
 #define DICEWIDGET_H
 
 #include <QtWidgets>
+
 #define  MIN_DICE_SIZE 64
 
 class DiceWidget : public QWidget

@@ -4,7 +4,8 @@
 DiceWidget::DiceWidget( QWidget* parent )
   : QWidget( parent ), value( rand() % 6 + 1 )
 {
-  setMinimumSize( MIN_DICE_SIZE, MIN_DICE_SIZE );
+    setMinimumSize( MIN_DICE_SIZE, MIN_DICE_SIZE );
+
 }
 
 void DiceWidget::rollDiceSlot( void )
@@ -16,7 +17,6 @@ void DiceWidget::rollDiceSlot( void )
     value=newValue;
     emit valueChanged(newValue);
   }
-  // Signal in MainForm nutzen
 }
 
 void DiceWidget::resizeEvent( QResizeEvent* /*event*/ )

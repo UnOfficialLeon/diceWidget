@@ -8,3 +8,6 @@ SOURCES     += main.cpp dicewidget.cpp \
     mainform.cpp
 HEADERS     +=          dicewidget.h \
     mainform.h
+
+FORMS += \
+        mainform.ui
