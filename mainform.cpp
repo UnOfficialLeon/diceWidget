@@ -15,8 +15,8 @@ MainForm::MainForm( QWidget* parent )
 //    DiceWidget* newDice = new DiceWidget;
 //    diceLayout->addWidget( newDice, 1, i, nullptr );
 //    dice[ i ] = newDice;
-//    connect( btnRollDice, SIGNAL( clicked() ),
-//             newDice, SLOT( rollDiceSlot() ) );
+      connect( btnRollDice, SIGNAL( clicked() ),
+               dice[i], SLOT( rollDiceSlot() ) );
 
 //    QLCDNumber* newNumber = new QLCDNumber;
 //    newNumber->setDigitCount(1);
@@ -24,8 +24,8 @@ MainForm::MainForm( QWidget* parent )
 //    diceLayout->addWidget( newNumber, 2, i);
 //    lcds[i] = newNumber;
       lcds[i]->display(dice[i]->getValue());
-//    connect( newDice, SIGNAL( valueChanged(int) ),
-//               newNumber, SLOT( display(int) ));
+      connect( dice[i], SIGNAL( valueChanged(int) ),
+                 lcds[i], SLOT( display(int) ));
 
     }
 
