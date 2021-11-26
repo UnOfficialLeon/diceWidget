@@ -14,5 +14,7 @@ MainForm::MainForm( QWidget* parent )
         lcds[i]->display(dice[i]->getValue());
         connect( dice[i], SIGNAL( valueChanged(int) ),
                  lcds[i], SLOT( display(int) ));
+        connect( dice[i], SIGNAL( clicked() ),
+                 dice[i], SLOT( rollDiceSlot() ) );
     }
 }

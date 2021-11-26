@@ -1,6 +1,6 @@
 #ifndef DICEWIDGET_H
 #define DICEWIDGET_H
-
+#include <QMouseEvent>
 #include <QtWidgets>
 
 #define  MIN_DICE_SIZE 64
@@ -13,6 +13,8 @@ class DiceWidget : public QWidget
     QRect diceRect;
     int   dotRadius;
     int   dotStep;
+
+    bool clickStarted;
 
     void drawDot( QPainter* painter, QPoint pos );
     void drawCenterDot( QPainter* painter );
@@ -33,8 +35,13 @@ class DiceWidget : public QWidget
     virtual void resizeEvent( QResizeEvent* event );
     virtual void paintEvent( QPaintEvent* event );
 
+    void mousePressEvent ( QMouseEvent * event );
+    void mouseReleaseEvent ( QMouseEvent * event );
+
+
   signals:
     void valueChanged(int newValue);
+    void clicked( void );
 };
 
 #endif // DICEWIDGET_H

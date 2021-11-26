@@ -19,12 +19,14 @@ void DiceWidget::rollDiceSlot( void )
   }
 }
 
+
+
 void DiceWidget::resizeEvent( QResizeEvent* /*event*/ )
 {
   int diceSize = width() < height() ? width() : height();
   diceSize--;
   diceRect = QRect( 0, 0, diceSize, diceSize );
-  diceRect.moveCenter( QPoint( 0, 0 ) );
+  diceRect.moveCenter( rect().center() );
   dotRadius = diceSize / 14;
   dotStep   = 4 * dotRadius;
 }
@@ -75,7 +77,6 @@ void DiceWidget::drawDiceBackGround( QPainter* painter )
 {
   painter->setPen( Qt::black );
   painter->setBrush( Qt::white );
-  painter->translate( rect().center() );
   painter->drawRoundedRect( diceRect, 25, 25, Qt::RelativeSize );
 }
 
@@ -83,7 +84,7 @@ void DiceWidget::drawDiceDots( QPainter* painter )
 {
   // Füllung für Punkte auf schwarz setzen
   painter->setBrush( Qt::black );
-
+  painter->translate( rect().center() );
   switch( value )
   {
     case 5:
@@ -105,4 +106,17 @@ void DiceWidget::drawDiceDots( QPainter* painter )
       drawTopLeftBottomRightDots( painter );
     break;
   }
+}
+
+void DiceWidget::mousePressEvent(QMouseEvent *event)
+{
+    if (event->button() != Qt::LeftButton) return;
+    clickStarted = diceRect.contains(event->pos());
+}
+
+void DiceWidget::mouseReleaseEvent(QMouseEvent *event)
+{
+    if (event->button() != Qt::LeftButton || !clickStarted ) return;
+    clickStarted = diceRect.contains(event->pos());
+    emit clicked();
 }
