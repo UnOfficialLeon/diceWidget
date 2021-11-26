@@ -1,5 +1,6 @@
 #include "dicewidget.h"
 #include <stdlib.h>
+#include <QPalette>
 
 DiceWidget::DiceWidget( QWidget* parent )
   : QWidget( parent ), value( rand() % 6 + 1 )
@@ -46,7 +47,8 @@ int DiceWidget::getValue() const
 
 void DiceWidget::drawDot( QPainter* painter, QPoint pos )
 {
-  painter->drawEllipse( QPointF( pos.x() * dotStep, pos.y() * dotStep ),
+    painter->setBrush( palette().color( QPalette::LinkVisited ) );
+    painter->drawEllipse( QPointF( pos.x() * dotStep, pos.y() * dotStep ),
                         dotRadius, dotRadius );
 }
 
@@ -76,7 +78,8 @@ void DiceWidget::drawOuterMiddleDots( QPainter* painter )
 void DiceWidget::drawDiceBackGround( QPainter* painter )
 {
   painter->setPen( Qt::black );
-  painter->setBrush( Qt::white );
+  //painter->setBrush( Qt::white );
+  painter->setBrush( palette().color( QPalette::Link ) );
   painter->drawRoundedRect( diceRect, 25, 25, Qt::RelativeSize );
 }
 
