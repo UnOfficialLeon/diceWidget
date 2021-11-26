@@ -11,8 +11,8 @@ class DiceWidget : public QWidget
   private:
     int   value;
     QRect diceRect;
-    int   dotRadius;
-    int   dotStep;
+    double   dotRadius;
+    double   dotStep;
 
     bool clickStarted;
 

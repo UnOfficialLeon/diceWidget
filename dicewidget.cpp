@@ -27,8 +27,8 @@ void DiceWidget::resizeEvent( QResizeEvent* /*event*/ )
   diceSize--;
   diceRect = QRect( 0, 0, diceSize, diceSize );
   diceRect.moveCenter( rect().center() );
-  dotRadius = diceSize / 14;
-  dotStep   = 4 * dotRadius;
+  dotRadius = diceSize / 14.0;
+  dotStep   = 4.0 * dotRadius;
 }
 
 void DiceWidget::paintEvent( QPaintEvent* /*event*/ )
@@ -46,7 +46,7 @@ int DiceWidget::getValue() const
 
 void DiceWidget::drawDot( QPainter* painter, QPoint pos )
 {
-  painter->drawEllipse( QPoint( pos.x() * dotStep, pos.y() * dotStep ),
+  painter->drawEllipse( QPointF( pos.x() * dotStep, pos.y() * dotStep ),
                         dotRadius, dotRadius );
 }
 
