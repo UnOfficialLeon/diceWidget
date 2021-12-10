@@ -13,6 +13,7 @@ class DiceWidget : public QWidget
     QRect diceRect;
     double   dotRadius;
     double   dotStep;
+    bool mayRoll = true;
 
     bool clickStarted;
 
@@ -22,14 +23,24 @@ class DiceWidget : public QWidget
     void drawTopRightBottomLeftDots( QPainter* painter );
     void drawOuterMiddleDots( QPainter* painter );
     void drawDiceBackGround( QPainter* painter );
+    void drawDiceBackGrounds( QPainter* painter );
     void drawDiceDots( QPainter* painter );
+
+
+
 
   public:
     explicit DiceWidget( QWidget* parent = nullptr );
     int getValue() const;
 
+    bool getMayRoll( void ) const;
+
   public slots:
     void rollDiceSlot( void );
+    void setMayRoll( bool value );
+    void toggleMayRoll( void );
+    void enableMayRoll( void );
+    void disableMayRoll( void );
 
   protected:
     virtual void resizeEvent( QResizeEvent* event );

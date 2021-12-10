@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>191</width>
-    <height>164</height>
+    <height>195</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -20,32 +20,6 @@
    <string>Wuerfeltestprogramm</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QPushButton" name="btnRollDice">
-     <property name="text">
-      <string>Wuerfeln</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="DiceWidget" name="dice_1" native="true"/>
-     </item>
-     <item>
-      <widget class="DiceWidget" name="dice_2" native="true"/>
-     </item>
-     <item>
-      <widget class="DiceWidget" name="dice_3" native="true"/>
-     </item>
-     <item>
-      <widget class="DiceWidget" name="dice_4" native="true"/>
-     </item>
-     <item>
-      <widget class="DiceWidget" name="dice_5" native="true"/>
-     </item>
-    </layout>
-   </item>
    <item row="2" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
@@ -62,9 +36,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -73,9 +56,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -87,6 +79,15 @@
              <red>139</red>
              <green>142</green>
              <blue>142</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -112,9 +113,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -123,9 +133,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -137,6 +156,15 @@
              <red>139</red>
              <green>142</green>
              <blue>142</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -162,9 +190,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -173,9 +210,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -187,6 +233,15 @@
              <red>139</red>
              <green>142</green>
              <blue>142</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -212,9 +267,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -223,9 +287,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -237,6 +310,15 @@
              <red>139</red>
              <green>142</green>
              <blue>142</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -262,9 +344,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -273,9 +364,18 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>153</red>
-             <green>42</green>
-             <blue>154</blue>
+             <red>34</red>
+             <green>143</green>
+             <blue>151</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
             </color>
            </brush>
           </colorrole>
@@ -290,6 +390,15 @@
             </color>
            </brush>
           </colorrole>
+          <colorrole role="AlternateBase">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>200</red>
+             <green>200</green>
+             <blue>232</blue>
+            </color>
+           </brush>
+          </colorrole>
          </disabled>
         </palette>
        </property>
@@ -299,6 +408,32 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="DiceWidget" name="dice_1" native="true"/>
+     </item>
+     <item>
+      <widget class="DiceWidget" name="dice_2" native="true"/>
+     </item>
+     <item>
+      <widget class="DiceWidget" name="dice_3" native="true"/>
+     </item>
+     <item>
+      <widget class="DiceWidget" name="dice_4" native="true"/>
+     </item>
+     <item>
+      <widget class="DiceWidget" name="dice_5" native="true"/>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="btnRollDice">
+     <property name="text">
+      <string>Wuerfeln</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
